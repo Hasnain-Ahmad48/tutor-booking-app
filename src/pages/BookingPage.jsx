@@ -7,6 +7,7 @@ import {getBookings, saveBookings} from "../utils/localStorage";
 const BookingPage = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedSlot, setSelectedSlot] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const [bookings, setBookings] = useState(() => getBookings());
 
   const handleNewBooking = booking => {
@@ -14,6 +15,10 @@ const BookingPage = () => {
     setBookings(updatedBookings);
     saveBookings(updatedBookings);
     setSelectedSlot("");
+
+    // Show success message
+    setSuccessMessage("Booking Confirmed!");
+    setTimeout(() => setSuccessMessage(""), 3000); // disappear after 3s
   };
 
   return (
@@ -35,11 +40,16 @@ const BookingPage = () => {
       )}
 
       {selectedSlot && (
-        <BookingForm
-          date={selectedDate}
-          slot={selectedSlot}
-          onConfirm={handleNewBooking}
-        />
+        <>
+          <BookingForm
+            date={selectedDate}
+            slot={selectedSlot}
+            onConfirm={handleNewBooking}
+          />
+          {successMessage && (
+            <div className="success-message">{successMessage}</div>
+          )}
+        </>
       )}
     </div>
   );

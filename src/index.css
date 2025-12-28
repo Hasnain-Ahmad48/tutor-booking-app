@@ -49,6 +49,46 @@ select:focus {
   border-color: #4caf50;
 }
 
+nav {
+  display: flex; /* inline-flex not needed here */
+  justify-content: flex-start; /* align to start */
+  align-items: center;
+  gap: 10px; /* space between buttons */
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+/* Nav links styled as buttons */
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 14px;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  transition: 0.3s;
+  margin: 0; /* remove margin so gap handles spacing */
+}
+
+.nav a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+.success-message {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* Buttons */
 button {
   background-color: #4caf50;
@@ -119,4 +159,19 @@ tr:nth-child(even) {
   text-decoration: none;
   color: #4caf50;
   font-weight: bold;
+}
+
+
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
 }
