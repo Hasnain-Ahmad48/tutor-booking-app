@@ -14,7 +14,7 @@ const SlotList = ({
     <div>
       <h3>Available Time Slots</h3>
 
-      <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+      <div className="slot-grid">
         {TIME_SLOTS.map((slot) => {
           const isBooked = bookedSlots.includes(slot);
           const isSelected = selectedSlot === slot;

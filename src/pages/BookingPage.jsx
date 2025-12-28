@@ -17,7 +17,7 @@ const BookingPage = () => {
   };
 
   return (
-    <div style={{padding: "20px"}}>
+    <div className="container">
       <h1>Tutor Mentoring Session Booking</h1>
 
       <DateSelector

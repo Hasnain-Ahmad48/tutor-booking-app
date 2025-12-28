@@ -23,7 +23,7 @@ const AdminPage = () => {
     : bookings;
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="container">
       <h1>Admin Dashboard</h1>
 
       <div style={{ marginBottom: "20px" }}>

@@ -41,7 +41,7 @@ const BookingForm = ({ date, slot, onConfirm }) => {
       </p>
 
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <input
             type="text"
             placeholder="Your Name"
