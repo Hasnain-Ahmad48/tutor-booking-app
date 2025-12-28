@@ -1,10 +1,10 @@
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {HashRouter as Routes, Route, Link, Router} from "react-router-dom";
 import BookingPage from "./pages/BookingPage";
 import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <nav className="nav">
         <Link to="/">Booking</Link>
         <Link to="/admin">Admin</Link>
@@ -19,7 +19,7 @@ function App() {
           element={<AdminPage />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
