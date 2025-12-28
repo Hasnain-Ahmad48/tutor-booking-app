@@ -16,9 +16,9 @@ const BookingPage = () => {
     saveBookings(updatedBookings);
     setSelectedSlot("");
 
-    // Show success message
+ 
     setSuccessMessage("Booking Confirmed!");
-    setTimeout(() => setSuccessMessage(""), 3000); // disappear after 3s
+    setTimeout(() => setSuccessMessage(""), 3000); 
   };
 
   return (

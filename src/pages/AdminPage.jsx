@@ -14,7 +14,7 @@ const AdminPage = () => {
     saveBookings(updatedBookings);
   };
 
-  // ✅ New: Delete booking function
+  
   const handleDelete = id => {
     const updatedBookings = bookings.filter(booking => booking.id !== id);
     setBookings(updatedBookings);
@@ -51,7 +51,7 @@ const AdminPage = () => {
               <th>Date</th>
               <th>Time Slot</th>
               <th>Status</th>
-              <th>Action</th> {/* New column */}
+              <th>Action</th> 
             </tr>
           </thead>
           <tbody>

@@ -1,4 +1,4 @@
-import {HashRouter as Routes, Route, Link, Router} from "react-router-dom";
+import {HashRouter, Routes, Route, Link} from "react-router-dom";
 import BookingPage from "./pages/BookingPage";
 import AdminPage from "./pages/AdminPage";
 
@@ -9,6 +9,7 @@ function App() {
         <Link to="/">Booking</Link>
         <Link to="/admin">Admin</Link>
       </nav>
+
       <Routes>
         <Route
           path="/"
